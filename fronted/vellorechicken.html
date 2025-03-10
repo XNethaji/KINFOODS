@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vellore Chicken</title>
+<link rel="stylesheet" href="vellorechicken.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="food-particles"></div>
+
+<header>
+    <div class="header-content">
+        <h1>Vellore Chicken</h1>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <button class="menu-button" id="menuButton">☰</button>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav" id="mainNav">
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="close-nav" id="closeNav">×</button>
+</nav>
+
+<div class="container">
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search for dishes...">
+        <div class="search-icon">🔍</div>
+    </div>
+    
+    <div class="filter-container">
+        <div class="toggle-buttons">
+            <button class="filter-btn veg-btn active" data-filter="all">All</button>
+            <button class="filter-btn veg-btn" data-filter="veg">Veg</button>
+            <button class="filter-btn nonveg-btn" data-filter="nonveg">Non-Veg</button>
+        </div>
+        <div class="sort-container">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect" class="sort-select">
+                <option value="name">Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="menu-list" id="menuList">
+        <!-- Veg Items -->
+        <div class="menu-item" data-type="veg" data-name="Paneer Butter Masala" data-price="355">
+            <div class="item-details">
+                <div class="item-badge veg">Veg</div>
+                <h3>Paneer Butter Masala</h3>
+                <p class="item-description">Creamy paneer cubes in a rich tomato and butter gravy</p>
+                <div class="item-price">₹355</div>
+            </div>
+            <div class="item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">−</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <button class="add-to-cart">Add</button>
+            </div>
+            <div class="item-image">
+                <img src="assets/panner butter masaal.PNG" alt="Paneer Butter Masala">
+            </div>
+        </div>
+        
+        <div class="menu-item" data-type="veg" data-name="Dosa" data-price="50">
+            <div class="item-details">
+                <div class="item-badge veg">Veg</div>
+                <h3>Dosa</h3>
+                <p class="item-description">Crispy South Indian crepe made from fermented rice batter</p>
+                <div class="item-price">₹50</div>
+            </div>
+            <div class="item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">−</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <button class="add-to-cart">Add</button>
+            </div>
+            <div class="item-image">
+                <img src="assets/" alt="Dosa">
+            </div>
+        </div>
+        
+        <div class="menu-item" data-type="veg" data-name="Idly" data-price="10">
+            <div class="item-details">
+                <div class="item-badge veg">Veg</div>
+                <h3>Idly</h3>
+                <p class="item-description">Soft steamed rice cakes, served with sambar and chutney</p>
+                <div class="item-price">₹10</div>
+            </div>
+            <div class="item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">−</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <button class="add-to-cart">Add</button>
+            </div>
+            <div class="item-image">
+                <img src="assets/idly1.jpeg" alt="Idly">
+            </div>
+        </div>
+        
+        <!-- Non-Veg Items -->
+        <div class="menu-item" data-type="nonveg" data-name="Chicken Biryani" data-price="180">
+            <div class="item-details">
+                <div class="item-badge nonveg">Non-Veg</div>
+                <h3>Chicken Biryani</h3>
+                <p class="item-description">Fragrant basmati rice cooked with tender chicken and aromatic spices</p>
+                <div class="item-price">₹180</div>
+            </div>
+            <div class="item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">−</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <button class="add-to-cart">Add</button>
+            </div>
+            <div class="item-image">
+                <img src="assets/biriyani2.png" alt="Chicken Biryani">
+            </div>
+        </div>
+        
+        <div class="menu-item" data-type="nonveg" data-name="Chicken fried rice" data-price="240">
+            <div class="item-details">
+                <div class="item-badge nonveg">Non-Veg</div>
+                <h3>Butter Chicken</h3>
+                <p class="item-description">Tender chicken pieces in a creamy tomato and butter sauce</p>
+                <div class="item-price">₹240</div>
+            </div>
+            <div class="item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">−</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <button class="add-to-cart">Add</button>
+            </div>
+            <div class="item-image">
+                <img src="assets/chicken fried rice.jpg" alt=" Chicken">
+            </div>
+        </div>
+        
+        <div class="menu-item" data-type="nonveg" data-name="Mutton Biryani" data-price="220">
+            <div class="item-details">
+                <div class="item-badge nonveg">Non-Veg</div>
+                <h3>Mutton Biryani</h3>
+                <p class="item-description">Aromatic basmati rice layered with tender mutton pieces and spices</p>
+                <div class="item-price">₹220</div>
+            </div>
+            <div class="item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn minus">−</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <button class="add-to-cart">Add</button>
+            </div>
+            <div class="item-image">
+                <img src="assets/mutton.jpg" alt="Mutton Biryani">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cart-button" id="cartButton">
+    <div onclick="location.href='cart.html'" class="cart-icon">🛒</div>
+    <span class="cart-count">0</span>
+</div>
+
+    <div class="cart-items" id="cartItems">
+        <!-- Cart items will be added here dynamically -->
+        <div class="empty-cart">Your cart is empty</div>
+    </div>
+    <div class="empty-message" id="emptyMessage">
+        <div class="message-content">
+            <div class="cart-icon">🛒</div>
+            <p>Your cart is empty. Add items to view orders.</p>
+            <button class="close-message">Close</button>
+        </div>
+    </div>
+
+<div class="notification" id="notification">
+    <div class="notification-content">Item added to cart!</div>
+</div>
+
+<script src="vellorechicken.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders - Vellore Chicken</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Vellore Chicken</h1>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <button class="menu-button" id="menuButton">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="orders-header">
+            <h2>Your Orders</h2>
+            <div class="order-filters">
+                <button class="filter-btn active" data-filter="all">All Orders</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <div class="orders-list" id="ordersList">
+            <!-- Orders will be populated here -->
+        </div>
+    </main>
+
+    <div class="cart-button" id="cartButton">
+        
+        <span class="cart-count">0</span>
+    </div>
+
+    <div class="order-details-panel" id="orderDetailsPanel">
+        <div class="panel-header">
+            <h2>Your Order</h2>
+            <button class="close-panel" id="closePanel">×</button>
+        </div>
+        <div class="order-items" id="orderItems">
+            <!-- Order items will be populated here -->
+        </div>
+        <div class="panel-footer">
+            <div class="order-total">
+                <span>Total:</span>
+                <span class="total-amount">₹0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <div class="empty-message" id="emptyMessage">
+        <div class="message-content">
+            <div class="cart-icon">🛒</div>
+            <p>Your cart is empty. Add items to view orders.</p>
+            <button class="close-message">Close</button>
+        </div>
+    </div>
+
+    <template id="orderItemTemplate">
+        <div class="order-item">
+            <div class="item-image">
+                <img src="/placeholder.svg" alt="">
+            </div>
+            <div class="item-details">
+                <h3 class="item-name"></h3>
+                <div class="item-price"></div>
+                <div class="item-controls">
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus">−</button>
+                        <span class="quantity">0</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="remove-item">×</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="cart.js"></script>
+</body>
+</html>

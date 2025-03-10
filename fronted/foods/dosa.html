@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINFOODS - Restaurant Explorer</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        KINFOODS
+        <div class="top-left">
+            <div onclick="location.href='index.html'" ><img src="assets/logo-transparent-png.png" alt="logo"></div>
+        </div>
+
+        <ul class="navbar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Mobile App</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <button class="signin">Sign In</button>
+        </ul>
+    </div>
+    
+    <div class="sub-header">
+        <div class="category-title">Other</div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+        <div class="cart-icon">🛒</div>
+    </div>
+    
+    <div class="filter-bar">
+        <button class="filter-btn">Filter</button>
+        <button class="filter-btn">Sort By</button>
+    </div>
+    
+    <div class="container">
+        <h2 class="section-title">Restaurants to explore</h2>
+        
+        <div class="restaurant-grid">
+            <div class="restaurant-card">
+                <div class="restaurant-image">
+                    <div onclick="location.href='vellorechicken.html'"><img src="assets/biryani3.jpg" alt=""></div>
+                </div>
+                <div class="restaurant-info">
+                    <h3>Dosa</h3>
+                    <p class="restaurant-name">Vellore kitchen</p>
+                    <p class="restaurant-details">₹125 - 30-35 mins</p>
+                </div>
+            </div>
+            
+            <div class="restaurant-card">
+                <div class="restaurant-image">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Biryani">
+                </div>
+                <div class="restaurant-info">
+                    <h3>Biryani</h3>
+                    <p class="restaurant-name">Dindigul Thalappakatti</p>
+                    <p class="restaurant-details">₹179 - 30-35 mins</p>
+                </div>
+            </div>
+            
+            <div class="restaurant-card">
+                <div class="restaurant-image">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Biryani">
+                </div>
+                <div class="restaurant-info">
+                    <h3>Biryani</h3>
+                    <p class="restaurant-name">Moonlight Takeaway</p>
+                    <p class="restaurant-details">₹449 - Special Price</p>
+                </div>
+            </div>
+            
+            <div class="restaurant-card">
+                <div class="restaurant-image">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Biryani">
+                </div>
+                <div class="restaurant-info">
+                    <h3>Biryani</h3>
+                    <p class="restaurant-name">Basheer Bai Biryani</p>
+                    <p class="restaurant-details">₹150 - 25-30 mins</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="cart-button">
+        <span class="cart-icon-large">🛒</span>
+        <span class="cart-notification">0</span>
+    </a>
+    
+    <div id="signinPopup" class="popup">
+        <span class="close-btn" onclick="closePopup('signinPopup')">&times;</span>
+        <h2>Sign In</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="signin-btn">Sign In</button>
+    </div>
+    
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        
+        function closePopup(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+        
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff5722;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Header Styles */
+.header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.header:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.top-left {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.top-left:hover {
+    transform: scale(1.05);
+}
+
+.top-left img {
+    padding: 0px;
+    width: 200px;
+    height: 100px;
+    display: block;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    align-items: center;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.navbar-menu li:hover {
+    transform: translateY(-3px);
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    color: #ff5722;
+}
+
+.navbar-menu li a.active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #ff5722;
+    color: #ff5722;
+}
+
+.navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover::after {
+    width: 100%;
+}
+
+/* Sub Header Styles */
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 60%;
+    max-width: 500px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    width: 65%;
+    border-color: #ff5722;
+    box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Filter Bar Styles */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    padding: 15px 20px;
+    background-color: #f8f8f8;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Restaurant Grid Styles */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.restaurant-card:hover .restaurant-image img {
+    transform: scale(1.1);
+}
+
+.restaurant-info {
+    padding: 15px;
+}
+
+.restaurant-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.restaurant-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.restaurant-details {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Cart Button Styles */
+.cart-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff5722;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 100;
+}
+
+.cart-icon-large {
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cart-button:hover .cart-icon-large {
+    transform: scale(1.2);
+}
+
+.cart-notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    color: #ff5722;
+    font-size: 14px;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translate(30%, -30%);
+    transition: all 0.3s ease;
+}
+
+.cart-button:hover .cart-notification {
+    transform: translate(30%, -30%) scale(1.2);
+}
+
+/* Sign In Button Styles */
+.signin {
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #ff5722;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.signin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ff5722;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.signin:hover {
+    color: white;
+}
+
+.signin:hover::before {
+    width: 100%;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.popup.active {
+    display: block;
+    transform: translateX(0);
+}
+
+.popup h2 {
+    text-align: center;
+    color: #ff5722;
+    margin-bottom: 30px;
+}
+
+.popup input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.popup input:focus {
+    outline: none;
+    border-color: #ff5722;
+    box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff5722;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.signin-btn:hover {
+    background: #e64a19;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 74, 25, 0.4);
+}
+
+.signin-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(230, 74, 25, 0.4);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff5722;
+    transform: rotate(90deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: static;
+        justify-content: center;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .top-left {
+        position: static;
+        margin: 0 auto 15px;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    
+    .sub-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .restaurant-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar-menu {
+        gap: 10px;
+    }
+    
+    .signin {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+}

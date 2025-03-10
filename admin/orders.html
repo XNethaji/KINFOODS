@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinfoods Admin - Orders</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="admin-header">
+                <div class="logo">
+                    <img src="img/kinfoods-logo.png" alt="Kinfoods Logo">
+                    <h1>Kinfoods</h1>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="add-item.html" class="nav-item">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add Item</span>
+                </a>
+                <a href="show-items.html" class="nav-item">
+                    <i class="fas fa-list"></i>
+                    <span>Show Items</span>
+                </a>
+                <a href="orders.html" class="nav-item active">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="#" class="nav-item" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="admin-header">
+                <h2>Order Page</h2>
+                <div class="user-profile">
+                    <span id="admin-name">Admin User</span>
+                    <img src="img/admin-avatar.png" alt="Admin Avatar">
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h3 class="table-title">All Orders</h3>
+                    <div class="table-actions">
+                        <input type="text" class="search-box" placeholder="Search orders...">
+                        <select class="form-control" style="width: 150px;">
+                            <option value="all">All Status</option>
+                            <option value="processing">Processing</option>
+                            <option value="out-for-delivery">Out for delivery</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-001</td>
+                            <td>
+                                <div>Avinash Kumar</div>
+                                <div style="font-size: 12px; color: #777;">GreatStack, Whitefield, Bangalore</div>
+                                <div style="font-size: 12px; color: #777;">9876543210</div>
+                            </td>
+                            <td>Greek salad x 2, Peri Peri Rolls x 3</td>
+                            <td>₹65</td>
+                            <td>
+                                <select class="form-control" style="width: 150px;">
+                                    <option value="processing" selected>Food Processing</option>
+                                    <option value="out-for-delivery">Out for delivery</option>
+                                    <option value="delivered">Delivered</option>
+                                </select>
+                            </td>
+                            <td>Mar 9, 2025</td>
+                            <td>
+                                <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-002</td>
+                            <td>
+                                <div>Priya Sharma</div>
+                                <div style="font-size: 12px; color: #777;">HSR Layout, Bangalore</div>
+                                <div style="font-size: 12px; color: #777;">8765432109</div>
+                            </td>
+                            <td>Chicken Biryani x 1, Butter Chicken x 1</td>
+                            <td>₹44</td>
+                            <td>
+                                <select class="form-control" style="width: 150px;">
+                                    <option value="processing">Food Processing</option>
+                                    <option value="out-for-delivery" selected>Out for delivery</option>
+                                    <option value="delivered">Delivered</option>
+                                </select>
+                            </td>
+                            <td>Mar 8, 2025</td>
+                            <td>
+                                <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-003</td>
+                            <td>
+                                <div>Rahul Verma</div>
+                                <div style="font-size: 12px; color: #777;">Indiranagar, Bangalore</div>
+                                <div style="font-size: 12px; color: #777;">7654321098</div>
+                            </td>
+                            <td>Paneer Butter Masala x 1, Roti x 4</td>
+                            <td>₹55</td>
+                            <td>
+                                <select class="form-control" style="width: 150px;">
+                                    <option value="processing">Food Processing</option>
+                                    <option value="out-for-delivery">Out for delivery</option>
+                                    <option value="delivered" selected>Delivered</option>
+                                </select>
+                            </td>
+                            <td>Mar 8, 2025</td>
+                            <td>
+                                <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="orders.js"></script>
+</body>
+</html>

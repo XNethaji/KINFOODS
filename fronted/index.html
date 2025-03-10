@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KINFOODS</title>
+
+<link rel="stylesheet" href="homepage.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+<div class="food-particles"></div>
+
+<div class="header">
+KINFOODS
+<div onclick="location.href='homepage.html'" class="top-left"> <img src="assets/logo-transparent-png.png" alt=""></div>
+
+<ul class="navbar-menu">
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="#explore-menu">Menu</a></li>
+<li><a href="#app-download">Mobile App</a></li>
+<li><a href="#footer">Contact Us</a></li>
+<button onclick="location.href='signup.html'" class="signin">Sign In</button>
+</ul>
+
+</div>
+
+<div class="container">
+<div class="box">
+<h2 class="animated-text">Order Food & Have Fun</h2>
+<div class="input-boxes">
+    <input type="text" placeholder="Search for restaurant or food" class="search-input">
+    <div class="search-icon">🔍</div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="categories">
+<div onclick="location.href='veg.html'" class="category-card"> <img src="assets/idly1.jpeg" alt="">Veg</div>
+<div onclick="location.href= 'nonveg.html'" class="category-card"> <img src="assets/biriyani1.png" alt="Non Veg">Non veg</div>
+<div onclick="location.href='desserts.html'" class="category-card"> <img src="assets/dess.jpg" alt="Desserts">Desserts</div>
+</div>
+<br>
+<br>
+<br>
+
+
+<h3 class="section-title">Popular Foods</h3>
+<div class="foods">
+<div onclick="location.href='foods/dosa.html'" class="food-card"><img src="assets/dosa.jpg" alt="Dosa">Dosa</div>
+<div onclick="location.href='foods/roti.html'" class="food-card"><img src="assets/roti1.jpeg" alt="Roti">Roti</div>
+<div onclick="location.href='foods/pizza.html'" class="food-card"><img src="assets/pizza.jpeg" alt="Pizza">Pizza</div>
+<div onclick="location.href='foods/biryani.html'" class="food-card"><img src="assets/biriyani1.png" alt="Biryani">Biryani</div>
+<div onclick="location.href='foods/idly.html'" class="food-card"><img src="assets/idly1.jpeg" alt="Idly">Idly</div>
+<div onclick="location.href='foods/meals.html'" class="food-card"><img src="assets/rice.PNG" alt="Meals">Meals</div>
+<div onclick="location.href='foods/curdrice.html'" class="food-card"><img src="assets/curd rice.PNG" alt="Curd rice">Curd rice</div>
+<div onclick="location.href='foods/tomatorice.html'" class="food-card"><img src="assets/tomato rice.JPG" alt="Tomato rice">Tomato rice</div>
+<div onclick="location.href='foods/pannerbuttermasala.html'" class="food-card"><img src="assets/panner butter masaal.PNG" alt="Panner butter masala">Panner butter masala</div>
+<div onclick="location.href='foods/naan.html'" class="food-card"><img src="assets/naan1.JPG" alt="Naan">Naan</div>
+</div>
+
+<h3 class="section-title">Top Restaurants</h3>
+<div class="restaurants">
+<div onclick="location.href='vellorechicken.html'" class="restaurant-card"><img src="assets/biriyani1.png" alt="The Big Barbeque">The vellore chicken</div>
+<div onclick="location.href='restaurant1.html'" class="restaurant-card"><img src="restaurant1.jpg" alt="The Big Barbeque">The Big Barbeque</div>
+<div onclick="location.href='restaurant1.html'" class="restaurant-card"><img src="restaurant1.jpg" alt="The Big Barbeque">The Big Barbeque</div>
+<div onclick="location.href='restaurant1.html'" class="restaurant-card"><img src="restaurant1.jpg" alt="The Big Barbeque">The Big Barbeque</div>
+<div onclick="location.href='restaurant1.html'" class="restaurant-card"><img src="restaurant1.jpg" alt="The Big Barbeque">The Big Barbeque</div>
+</div>
+</div>
+
+<div id="signinPopup" class="popup">
+<span class="close-btn" onclick="closePopup('signinPopup')">&times;</span>
+<h2>LOGIN</h2>
+
+<input type="number" placeholder="Phone number">
+<button class="signin-btn">SIGN IN</button><br>
+<center> <p style="color: grey;">Not an existing user? </p> 
+<a href="#" onclick="closePopup('signinPopup'); openPopup('signupPopup')">SIGN UP</a> </center>
+</div>
+
+<div id="signupPopup" class="popup">
+<span class="close-btn" onclick="closePopup('signupPopup')">&times;</span>
+<h2>Create Account</h2>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email ID">
+<input type="number" placeholder="Phone number">
+<button class="signin-btn">CONTINUE</button>
+</div>
+
+</head>
+<body>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info fade-in" style="animation-delay: 0.2s;">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="location-icon">📍</i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Our Location</h4>
+                            <p>123 Food Street, Flavor City, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="phone-icon">📞</i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+919876543210">+91 9876 543 210</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="email-icon">✉️</i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@kinfoods.com">info@kinfoods.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="clock-icon">🕒</i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Sunday: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" title="Facebook">f</a>
+                            <a href="#" class="social-icon" title="Instagram">i</a>
+                            <a href="#" class="social-icon" title="Twitter">t</a>
+                            <a href="#" class="social-icon" title="LinkedIn">l</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in" style="animation-delay: 0.4s;">
+                    <h3>Send Us A Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                    
+                    <div class="success-message" id="successMessage">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container fade-in">
+                <!-- Replace with your actual Google Maps embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0017923108486!2d77.5945627!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1646569022601!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+<script src="homepage.js"></script>
+</body>
+</html>
