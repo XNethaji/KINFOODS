@@ -139,6 +139,7 @@ CREATE TABLE review (
     FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
     FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id)
 );
+```
 
 ## ⚙️ Tech Stack  
 
