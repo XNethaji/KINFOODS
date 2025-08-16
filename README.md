@@ -147,6 +147,11 @@ CREATE TABLE review (
 - **Database:** MySQL  
 - **Authentication:** JWT-based login system
 
+
+---
+
+## 📂 Project Structure
+
 Kinfooods/
 │── user-panel/ # Customer-facing app (frontend + integration)
 │── admin-panel/ # Admin dashboard for management
@@ -154,8 +159,29 @@ Kinfooods/
 │── database/ # SQL schema and queries
 │── README.md # Project documentation 
 
+
+
 ---
 
-## 📂 Project Structure  
+## 🔑 Authentication  
+
+- **User authentication** with JWT tokens.  
+- **Admin login** stored in a separate `admin` database.  
+
+---
+
+## 🚧 Future Enhancements  
+
+- Add real-time order tracking with Google Maps API.  
+- Implement wallet-based payments.  
+- Push notifications for order status updates.  
+- Advanced analytics dashboard for admins.  
+
+---
+
+## 👨‍💻 Author  
+
+**K. Nethaji**  
+B.Tech Student 
 
 
