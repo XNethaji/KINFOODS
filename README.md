@@ -145,7 +145,14 @@ CREATE TABLE review (
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Node.js, Express.js  
 - **Database:** MySQL  
-- **Authentication:** JWT-based login system  
+- **Authentication:** JWT-based login system
+
+Kinfooods/
+│── user-panel/ # Customer-facing app (frontend + integration)
+│── admin-panel/ # Admin dashboard for management
+│── backend/ # Node.js + Express server
+│── database/ # SQL schema and queries
+│── README.md # Project documentation 
 
 ---
 
